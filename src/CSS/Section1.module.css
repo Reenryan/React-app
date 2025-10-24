@@ -1,0 +1,130 @@
+/* =====================
+   MAIN CONTAINER STYLING
+===================== */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  gap: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1200px; /* limits total layout width */
+  margin:0;    /* centers it nicely */
+}
+
+/* IMAGE STYLING */
+.coverImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1 1 45%; /* Let image take about half width */
+}
+
+/* HEADING TEXT */
+.details1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111;
+  text-align: left;
+
+}
+.details2 {
+  font-family: 'Inter', 'Courier New', monospace;
+  font-weight: 300;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 500px;
+  text-align: left;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.message {
+  white-space: pre-line; /* ✅ keeps your manual line breaks but wraps properly */
+  margin: 0; /* remove unwanted spacing from <pre> */
+  text-align: left;
+}
+
+
+
+/* BUTTON STYLING */
+.btn {
+  background-color: rgba(241, 31, 31, 0.897);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+.btn:hover {
+  background-color: rgb(1,1,15);
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   RESPONSIVENESS
+===================== */
+@media (max-width: 350px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .coverImage {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .details1 {
+    font-size: 1.5rem;
+    margin-top: 5px;
+  }
+.message {
+    white-space: pre-line;
+    max-width: 100%;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+/* =====================
+   ULTRA SMALL DEVICES
+===================== */
+@media (max-width: 400px) {
+  .details1 {
+    font-size: 1.3rem;
+  }
+
+  .details2 {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+  }
+}
+@media (min-width:1200px){
+  .container{
+    width:1400px ;
+  }
+}

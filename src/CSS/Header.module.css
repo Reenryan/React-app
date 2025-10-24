@@ -1,0 +1,114 @@
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile menu icon (dashboard) */
+.dashboard {
+  width: 28px;
+  cursor: pointer;
+}
+
+/* Desktop nav hidden by default */
+.desktopNav {
+  display: none;
+}
+
+/* Mobile dropdown menu */
+.mobileNav {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 50%;
+  height: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.mobileNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileNav li {
+  margin: 15px 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+
+
+.mobileNav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mobileNav a:hover{
+  color: orangered;
+}
+/* Close button */
+.closeContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 200px;
+}
+
+.closeBtn {
+  width: 25px;
+  cursor: pointer;
+}
+
+/* 🖥️ Desktop view (from 768px up) */
+@media (min-width: 768px) {
+  .dashboard, .mobileNav {
+    display: none; /* hide mobile stuff */
+  }
+
+  .desktopNav {
+    display: block;/* show horizontal nav */
+  }
+
+  .desktopNav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    list-style: none;
+    margin-right:200px;
+    padding: 0;
+    margin-top: 10px;
+
+  }
+
+  .desktopNav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .desktopNav a:hover {
+    color: orangered;
+  }
+
+  .top {
+    justify-content: space-between;
+  }
+
+  .logoImage {
+    width: 50px;
+  }
+}
+
